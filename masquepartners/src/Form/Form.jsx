@@ -72,7 +72,13 @@ export default function Form() {
             }, (error) => {
                 console.log(error.text);
             });
-        e.target.reset();
+        setInput({
+            Nombre: '',
+            Apellido: '',
+            Email: '',
+            Celular: '',
+            Curso: '',
+        });
     }
 
     function geo() {

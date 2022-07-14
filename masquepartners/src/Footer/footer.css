@@ -1,0 +1,31 @@
+.footerContainer {
+    display: column;
+    background-color: black;
+}
+
+.infoContainer {
+    display: flex;
+    justify-content: space-evenly;
+    text-align: left;
+    color: white;
+}
+
+.infoContainer ul {
+    list-style: none;
+}
+
+.infoContainer h1 {
+    color: yellow;
+    font-size: larger;
+    text-align: center;
+}
+
+.mediaContainer {
+    display: flex;
+    justify-content: space-evenly;
+    color: white;
+}
+
+.mediaContainer em {
+    color: yellow
+}
