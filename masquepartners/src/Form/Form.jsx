@@ -84,21 +84,19 @@ export default function Form() {
     function geo() {
         if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition(succes, error);
-        }
-        function succes(geolocationPosition) {
-            let coords = geolocationPosition.coords;
-            var latitude = coords.latitude;
-            var longitude = coords.longitude
-            console.log(longitude)
-        }
-
+        };
         function error(err) {
             console.warn(err)
-        }
+        };
+
+        function succes(geolocationPosition) {
+            var coords = geolocationPosition.coords;
+            var latitude = coords.latitude;
+            var longitude = coords.longitude;
+            var maps = `https://www.google.com/maps/@${latitude},${longitude},5z`;
+            return maps;
+        };
     }
-
-
-
 
     return (
         <div className='firstContainer'>
@@ -179,8 +177,8 @@ export default function Form() {
                     <button type='Submit' className='sendBtn' >COMIENZA AHORA</button>
                 </form>
 
-            </div>
+            </div >
 
-        </div>
+        </div >
     )
 }
